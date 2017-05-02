@@ -7,7 +7,6 @@ if number < 0:
     i = number * -1
 else:
     i = number % 10
-i = number % 10
 if i > 5:
     print('Last digit of {:d} is {:d} and is greater than 5'.format(number, i))
 elif i == 0:
