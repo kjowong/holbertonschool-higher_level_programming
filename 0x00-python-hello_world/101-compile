@@ -2,5 +2,4 @@
 python3 -m compileall $PYFILE
 mv ./__pycache__/*.pyc .
 mv *.pyc $PYFILE'c'
-chmod +x $PYFILE'c'
 rm -rf __pycache__
