@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             print("{}".format(my_list[counter]), end="")
         except IndexError as err:
-            print("Error: {}".format(err))
+            print()
             return counter
         counter += 1
     print()
