@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" print_square function that prints a square in hashes"""
+
+
 def print_square(size):
+    """ print_square function """
     if not isinstance(size, int) and isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
     if size < 0:

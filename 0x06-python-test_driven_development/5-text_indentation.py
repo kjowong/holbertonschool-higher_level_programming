@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" text_indentation function that indents """
+
+
 def text_indentation(text):
+    """ text_indentation """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     text = text.replace(".", ".\n\n")
