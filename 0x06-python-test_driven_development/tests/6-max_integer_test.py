@@ -98,5 +98,8 @@ class TestMaxInteger(unittest.TestCase):
 
         def test_pos_number(self):
                 self.assertEqual(max_integer([--True, +4]), 4)
+
+        def test_max_middle(self):
+                self.assertEqual(max_integer([1, 2, 5, 3, 4]), 5)
 if __name__ == '__main__':
     unittest.main()
