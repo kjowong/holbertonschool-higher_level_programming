@@ -56,6 +56,9 @@ class Rectangle:
         return (self.__height * 2) + (self.__width * 2)
 
     def __str__(self):
+        """ defining str """
+        if self.__width == 0 or self.__height == 0:
+            return str1
         string = ""
         string += ("#" * self.__width + "\n") * self.__height
         return string[:-1]
