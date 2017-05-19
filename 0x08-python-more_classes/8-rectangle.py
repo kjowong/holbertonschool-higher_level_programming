@@ -59,6 +59,7 @@ class Rectangle:
         return (self.__height * 2) + (self.__width * 2)
 
     def __str__(self):
+        """ defining str """
         str1 = ""
         if self.__width == 0 or self.__height == 0:
             return str1
@@ -66,6 +67,7 @@ class Rectangle:
         return str1[:-1]
 
     def __repr__(self):
+        """ defining repr """
         str1 = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
         return str1
 
@@ -76,7 +78,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """ """
+        """ defining bigger or equal """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
