@@ -1,0 +1,57 @@
+The ``4-square`` module
+=====================================
+
+Using ``Square``
+-------------------------------------
+
+Importing Square to test
+
+>>> Square = __import__('4-square').Square
+
+-------------------------------------
+
+Begin tests
+
+Expected Success:
+=====================================
+
+# size is an int
+>>> my_square = Square(9)
+>>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+Area: 81 for size: 9
+
+# size is large int
+>>> my_square = Square(100000000000000000000000000000000000000000000000000000)
+>>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+Area: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 for size: 100000000000000000000000000000000000000000000000000000
+
+# no size passed
+>>> my_square = Square()
+>>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+Area: 0 for size: 0
+
+Expected Failures:
+=====================================
+
+# size is a string
+>>> my_square = Square("size")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# size is a float
+>>> my_square = Square(4.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# size is negative
+>>> my_square = Square(-1)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# size is a boolean
+>>> my_square = Square(True)
+>>> print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+Area: 1 for size: True
