@@ -6,6 +6,20 @@ class Square:
     """ defining square class """
     def __init__(self, size=0, position=(0, 0)):
         """ initializing set """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        if type(position) is not tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(position) is not 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        for i in position:
+            if not isinstance(i, int):
+                raise TypeError("position must be a tuple of 2 "                                                    "positive integers")
+            if i < 0:
+                raise TypeError("position must be a tuple of 2 "
+                                "positive integers")
         self.__size = size
         self.__position = position
 
@@ -54,9 +68,9 @@ class Square:
             print()
         for i in range(0, self.__position[1]):
             print()
-        for row in range(self.size):
+        for row in range(self.__size):
             for j in range(0, self.__position[0]):
                 print(" ", end="")
-            for column in range(self.size):
+            for column in range(self.__size):
                 print("#", end="")
             print()
