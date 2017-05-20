@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """ defining a rectangle based on 0-rectangle.py """
 
 
