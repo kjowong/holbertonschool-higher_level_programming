@@ -25,26 +25,26 @@ class Square:
         """ defining area """
         return self.__size ** 2
 
-    def __eq__(self, comp):
+    def __eq__(self, other):
         """ defining equal """
-        return Square.area(self) == Square.area(comp)
+        return Square.area(self) == Square.area(other)
 
-    def __ne__(self, comp):
+    def __ne__(self, other):
         """ defining does not """
-        return Square.area(self) != Square.area(comp)
+        return Square.area(self) != Square.area(other)
 
-    def __gt__(self, comp):
+    def __gt__(self, other):
         """ defining more then """
-        return Square.area(self) > Square.area(comp)
+        return Square.area(self) > Square.area(other)
 
-    def __ge__(self, comp):
+    def __ge__(self, other):
         """ defining more equal """
-        return Square.area(self) >= Square.area(comp)
+        return Square.area(self) >= Square.area(other)
 
-    def __lt__(self, comp):
+    def __lt__(self, other):
         """ defining less then """
-        return Square.area(self) < Square.area(comp)
+        return Square.area(self) < Square.area(other)
 
-    def __le__(self, comp):
+    def __le__(self, other):
         """ defining less equal """
-        return Square.area(self) <= Square.area(comp)
+        return Square.area(self) <= Square.area(other)
