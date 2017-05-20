@@ -59,6 +59,6 @@ class Rectangle:
         """ defining str """
         if self.__width == 0 or self.__height == 0:
             return str1
-        string = ""
-        string += ("#" * self.__width + "\n") * self.__height
-        return string[:-1]
+        str1 = ""
+        str1 += ("#" * self.__width + "\n") * self.__height
+        return str1[:-1]
