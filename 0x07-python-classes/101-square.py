@@ -64,6 +64,7 @@ class Square:
                 print()
 
     def __str__(self):
+        """ defining str """
         str1 = ""
         if self.__size == 0:
             return str1
