@@ -6,11 +6,12 @@ class Square(Rectangle):
     """ defining class Square """
     def __init__(self, size):
         """ initializing self """
-        Rectangle.__init__(self, size, size)
-        self.__width = size
-        self.__height = size
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)
 
-    def __str__(self):
-        """ defining str """
-        str1 = "[Square] {}/{}".format(self.__width, self.__height)
-        return str1
+
+def __str__(self):
+    """ defining str """
+    str1 = "[Square] {}/{}".format(self.__size, self.__size)
+    return str1
