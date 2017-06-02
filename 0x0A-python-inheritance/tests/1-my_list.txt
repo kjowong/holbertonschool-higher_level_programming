@@ -26,12 +26,3 @@
 >>> [1]
 >>> print(my_list)
 >>> [1]
-
->>> my_list = MyList()
->>> one_list = id(my_list)
->>> my_list.append(2)
->>> my_list.print_sorted()
-[2]
->>> two_list = id(my_list)
->>> one_list == two_list
-True
