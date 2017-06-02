@@ -6,4 +6,5 @@ class Square(Rectangle):
     """ defining class Square """
     def __init__(self, size):
         """ initializing self """
-        Rectangle.__init__(self, size, size)
+        self.__size = size
+        super().__init__(self.__size, self.__size)
