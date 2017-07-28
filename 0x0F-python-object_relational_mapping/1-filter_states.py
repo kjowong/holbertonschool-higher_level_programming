@@ -14,7 +14,7 @@ if __name__ == '__main__':
         database=argv[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name like 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
     state_rows = cur.fetchall()
     for state in state_rows:
         print(state)
