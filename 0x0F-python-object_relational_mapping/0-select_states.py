@@ -5,7 +5,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-""" code to be executed when imported """
+    """ code to be executed when imported """
     conn = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -17,6 +17,6 @@ if __name__ == '__main__':
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     state_rows = cur.fetchall()
     for state in state_rows:
-        print(state.id)
+        print(state)
     cur.close()
     conn.close()
