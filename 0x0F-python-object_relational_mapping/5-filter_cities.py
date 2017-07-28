@@ -17,7 +17,7 @@ if __name__ == '__main__':
     cur.execute(
         "SELECT cities.name FROM cities"
         " WHERE state_id IN (SELECT states.id from states WHERE"
-        " name = '{}'".format(argv[4]))
+        " name = '{}')".format(state_name))
     cities_rows = cur.fetchall()
     for city in cities_rows:
         print(city)
