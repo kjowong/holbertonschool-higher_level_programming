@@ -24,7 +24,7 @@ if __name__ == "__main__":
             State.id).all():
         if state:
             found.append(state.id)
-            print("{}".format(str(found[0])))
+            print("{}".format(found[0]))
     if not found:
         print("Not found")
     session.close()
