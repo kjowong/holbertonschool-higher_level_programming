@@ -16,11 +16,13 @@ if __name__ == '__main__':
     state_name = argv[4]
     cur = conn.cursor()
     cur.execute(
-        "SELECT GROUP_CONCAT(cities.name SEPARATOR ', ') FROM cities"
+        "SELECT cities.name FROM cities"
         " WHERE state_id IN (SELECT states.id from states WHERE"
         " name = '{}')".format(state_name))
     cities_rows = cur.fetchall()
+    city_list = list()
     for city in cities_rows:
-        print(city)
+        city_list.append(city[0])
+    print(", ".join(city_list))
     cur.close()
     conn.close()
