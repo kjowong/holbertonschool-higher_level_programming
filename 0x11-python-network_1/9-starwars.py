@@ -7,10 +7,12 @@
 from sys import argv
 import requests
 
-url = requests.get('https://swapi.co/api/people/?search={}'.format(argv[1]))
-if url.headers['Content-type'] == 'application/json':
-    json = url.json()
-    print("Number of result: {}".format(json.get('count')))
-    result = json.get('results')
-    for person in result:
-        print(person.get('name'))
+if __name__ == "__main__":
+    url = requests.get('https://swapi.co/api/people/?search={}'
+                       .format(argv[1]))
+    if url.headers['Content-type'] == 'application/json':
+        json = url.json()
+        print("Number of result: {}".format(json.get('count')))
+        result = json.get('results')
+        for person in result:
+            print(person.get('name'))

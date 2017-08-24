@@ -8,10 +8,11 @@ from sys import argv
 from requests.auth import HTTPBasicAuth
 import requests
 
-username = argv[1]
-password = argv[2]
+if __name__ == "__main__":
+    username = argv[1]
+    password = argv[2]
 
-resp = requests.get('https://api.github.com/user',
-                    auth=HTTPBasicAuth(username, password))
-json = resp.json()
-print(json.get('id'))
+    resp = requests.get('https://api.github.com/user',
+                        auth=HTTPBasicAuth(username, password))
+    json = resp.json()
+    print(json.get('id'))
