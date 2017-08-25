@@ -14,12 +14,13 @@ if __name__ == "__main__":
         json = url.json()
         print("Number of result: {}".format(json.get('count')))
         result = json.get('results')
-        for person in result:
-            print(person.get('name'))
-        next_page = json.get('next')
-        if next_page:
-            next_api_call = requests.get(next_page)
-            next_json = next_api_call.json()
-            next_result = next_json.get('results')
-            for person in next_result:
-                print(person.get('name'))
+        i = 0
+        while (i <= len(json['results'])):
+            if json.get('next') is not None and i == len(json['results']):
+                json = requests.get(json.get('next')).json()
+                i = 0
+            try:
+                print(json.get('results')[i].get('name'))
+            except:
+                pass
+            i += 1
