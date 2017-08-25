@@ -25,9 +25,9 @@ if __name__ == "__main__":
             next_api_call = requests.get(next_page)
             next_json = next_api_call.json()
             next_result = next_json.get('results')
-        for person in next_result:
-            print(person.get('name'))
-            for film in person['films']:
-                new_req = requests.get(film)
-                json_film = new_req.json()
-                print("\t{}".format(json_film.get('title')))
+            for person in next_result:
+                print(person.get('name'))
+                for film in person['films']:
+                    new_req = requests.get(film)
+                    json_film = new_req.json()
+                    print("\t{}".format(json_film.get('title')))
