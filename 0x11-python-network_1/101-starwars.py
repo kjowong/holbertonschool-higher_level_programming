@@ -12,7 +12,7 @@ if __name__ == "__main__":
                        .format(argv[1]))
     if url.headers['Content-type'] == 'application/json':
         json = url.json()
-        print("Number of result: {}".format(json.get('count')))
+        print("Number of results: {}".format(json.get('count')))
         result = json.get('results')
         i = 0
         while (i <= len(json['results'])):
