@@ -8,7 +8,7 @@ const options = {
 };
 request(options, function (error, response, body) {
   if (error) {
-    return console.error(error);
+    return console.log(error);
   } else {
     let count = 0;
     for (let item of JSON.parse(body).results) {

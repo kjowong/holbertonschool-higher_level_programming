@@ -8,7 +8,7 @@ const options = {
 request(options, function (error, response, body) {
   let countObj = {};
   if (error) {
-    return console.error(error);
+    return console.log(error);
   } else {
     for (let i = 0; i < JSON.parse(body).length; i++) {
       if (JSON.parse(body)[i].completed) {
